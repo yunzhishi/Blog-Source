@@ -3,8 +3,8 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Yunzhi Shi's Blog
-subtitle: We look for your faults
+title: Yunzhi's Blog
+subtitle: We look for your faults.
 description:
 author: Yunzhi Shi
 language: en
@@ -44,7 +44,7 @@ highlight:
   tab_replace:
 
 # Category & Tag
-default_category: uncategorized
+default_category: Blog
 category_map:
 tag_map:
 
@@ -69,4 +69,6 @@ avatar: /images/Yunzhi-Avatar.png
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type:
+  type: git
+  repo: git@github.com:yunzhishi/yunzhishi.github.io.git
+  branch: master

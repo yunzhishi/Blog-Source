@@ -18,6 +18,9 @@ All we need to do is typing one command line, telling git that thereafter `st` i
 $ git config --global alias.st status
 ```
 Now just try typing `git st` and see if it works.
+
+<!-- more -->
+
 There are other commands that can be abbreviated, it is commonly used that `co` for `checkout`, `ci` for `commit` and `br` for `branch`:
 ``` bash
 $ git config --global alias.co checkout
