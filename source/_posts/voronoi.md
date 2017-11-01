@@ -36,8 +36,8 @@ Unlike she having a dedicated server in Oregon, I host this website in [Git Page
 <br>
 <div class='text-center'>
     <a class="btn" onclick="setNorm(1)" rel="contents"> Manhattan </a>
-    <a class="btn" onclick="setNorm(2)" rel="contents"> Euclidean </a>
-    <a class="btn" onclick="setNorm(3)" rel="contents"> Chebyshev </a>
+    <a class="btn" onclick="setNorm(0)" rel="contents"> Euclidean </a>
+    <a class="btn" onclick="setNorm(2)" rel="contents"> Chebyshev </a>
     <a class="btn" onclick="reset()" rel="contents"> Clear </a>
 </div>
 </center>
@@ -87,8 +87,8 @@ Weirdly, I found a very subtle bug that only occurs here but not in Sarah's orig
 <br>
 <div class='text-center'>
     <a class="btn" onclick="setNorm_old(1)" rel="contents"> Manhattan </a>
-    <a class="btn" onclick="setNorm_old(2)" rel="contents"> Euclidean </a>
-    <a class="btn" onclick="setNorm_old(3)" rel="contents"> Chebyshev </a>
+    <a class="btn" onclick="setNorm_old(0)" rel="contents"> Euclidean </a>
+    <a class="btn" onclick="setNorm_old(2)" rel="contents"> Chebyshev </a>
     <a class="btn" onclick="reset_old()" rel="contents"> Clear </a>
 </div>
 </center>
@@ -110,7 +110,7 @@ void updatePoints(int n){
 }
 ...
 ```
-Notice that `int n` is declared as a global variable; however, in `updatePoints` it was only called as a local dummy variable. It leads to a very dangerous ambiguity: how should these two variables with the same name but different scope be related? Often this is an environment-dependent result. Eventually I fixed it by explicitly update the value of the global variable `int n`:
+Notice that `int n` is declared as a global variable; however, in `updatePoints` it was only called as a local dummy variable. It leads to a very dangerous ambiguity: how should these two variables with the same name but different scope be related? Often this is an environment-dependent result. Eventually I fixed it by explicitly updating the value of the global variable `int n`:
 ```java
 void updatePoints(int n_new){
     for (int i = points.size()-1; i >= 0; i--) {
