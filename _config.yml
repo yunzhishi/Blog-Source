@@ -14,7 +14,7 @@ timezone: US/Central
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: http://yunzhishi.github.io
 root: /
-permalink: :year/:month/:day/:title/
+permalink: :title.html
 permalink_defaults:
 
 # Directory
@@ -72,3 +72,7 @@ deploy:
   type: git
   repo: git@github.com:yunzhishi/yunzhishi.github.io.git
   branch: master
+
+# Sitemap
+sitemap:
+  path: sitemap.xml
